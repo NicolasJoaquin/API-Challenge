@@ -1,0 +1,70 @@
+openapi: 3.0.1
+  info: Conectapps - API Challenge.
+  version: 1.0.0
+servers:
+- url: http://localhost:8080/conectapps/
+tags: 
+- name: getData
+  description: Este endpoint consulta datos a la API con URL https://jsonplaceholder.typicode.com/posts y los almacena en la tabla post.
+- name: viewData
+  description: Este endpoint consulta todos los registros de la tabla post y los muestra en pantalla en formato JSON.
+- name: searchData
+  description: Este endpoint consulta el registro de la tabla post con el id indicado y lo muestra en pantalla en formato JSON.
+
+paths:
+  /getData:
+    get:
+      tags:
+      - getData
+      summary: Muestra el formulario para eliminar/no eliminar la tabla post previo a dar de alta los regístros.
+      responses:
+        200:
+          description: (OK) Muestra el formulario.
+    post:
+      tags:
+      - getData
+      summary: Elimina todos los regístros de la tabla post cuando se envía el parametro deleteTable vía POST con el valor yes, luego da de alta los regístros obtenidos a partir de la API externa en la tabla post.
+      parameters:
+      - deleteTable:
+        name: deleteTable
+        in: body
+        description: Confirmación para la eliminación de la tabla post.
+        required: true
+        enum: [yes, no]
+      responses:
+        200:
+          description: (OK) Luego de borrar o no la tabla post realiza el alta de los regístros y muestra una confirmación, si exíste un error lo muestra en pantalla, cualquier resultado es registrado en el log.
+  /viewData:
+    get:
+      tags:
+      - viewData
+      summary: Muestra en pantalla todos los regístros de la tabla post.
+      responses:
+        200:
+          description: (OK) Muestra los regístros en pantalla si la consulta se realizó con éxito, si exíste un error lo muestra en pantalla, cualquier resultado es registrado en el log. 
+  /searchData:
+    get:
+      tags:
+      - searchData
+      summary: Muestra el formulario para buscar el id del regístro especificado.
+      responses:
+        200:
+          description: (OK) Muestra el formulario.
+    ?{id}:
+      get:
+        tags:
+        - searchData
+        summary: Muestra en pantalla el regístro buscado.
+        parameters:
+        - id:
+          name: id
+          in: body
+          description: id del regístro a buscar.
+        responses:
+          200:
+            description: (OK) Muestra el regístro con el id buscado, si exíste un error también lo muestra en pantalla, cualquier resultado es registrado en el log. 
+    
+    
+    
+    
+    
