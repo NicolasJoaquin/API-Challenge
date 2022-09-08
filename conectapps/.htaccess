@@ -1,0 +1,8 @@
+# Archivo .htaccess -- Ruteo
+
+RewriteEngine on
+
+RewriteRule ^home$ controllers/home.php
+RewriteRule ^getData$ controllers/getData.php
+RewriteRule ^viewData$ controllers/viewData.php
+RewriteRule ^searchData$ controllers/searchData.php

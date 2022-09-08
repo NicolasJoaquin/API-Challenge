@@ -1,0 +1,8 @@
+
+ [Fecha] 06/09/2022 20:54:36 [IP] ::1 [PHPSESSID] 8f05so5b47pp3vfcsifjgbuiku [endpoint] getData [Msg] Se dieron de alta con éxito todos los regístros en la tabla 'post'.
+ [Fecha] 06/09/2022 20:54:39 [IP] ::1 [PHPSESSID] 8f05so5b47pp3vfcsifjgbuiku [endpoint] getData [Msg] Error #5, se produjo un error intentando insertar el regístro con 'id' 1 la base devuelve: Duplicate entry '1' for key 'id'
+ [Fecha] 06/09/2022 20:54:41 [IP] ::1 [PHPSESSID] 8f05so5b47pp3vfcsifjgbuiku [endpoint] viewData [Msg] Se realizó con éxito la consulta de todos los regístros de la tabla 'post', se consultaron 100 regístros
+ [Fecha] 06/09/2022 20:54:50 [IP] ::1 [PHPSESSID] 8f05so5b47pp3vfcsifjgbuiku [endpoint] searchData [Msg] Se realizó con éxito la consulta del regístro con 'id' 4 de la tabla 'post'.
+ [Fecha] 06/09/2022 20:54:52 [IP] ::1 [PHPSESSID] 8f05so5b47pp3vfcsifjgbuiku [endpoint] searchData [Msg] Error #2, se produjo un error intentando consultar el regístro con 'id'  el modelo devuelve: La cadena de caracteres de la variable $id no es numérica
+ [Fecha] 06/09/2022 20:54:57 [IP] ::1 [PHPSESSID] 8f05so5b47pp3vfcsifjgbuiku [endpoint] searchData [Msg] No se encontró ningún registro con el 'id' 500.
+ [Fecha] 06/09/2022 20:55:00 [IP] ::1 [PHPSESSID] 8f05so5b47pp3vfcsifjgbuiku [endpoint] searchData [Msg] Se realizó con éxito la consulta del regístro con 'id' 100 de la tabla 'post'.
