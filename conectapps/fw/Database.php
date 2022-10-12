@@ -18,7 +18,7 @@ class Database {
     }
     
     private function connect(){
-        $this->cn = mysqli_connect("localhost", "root", "", "conectapps");
+        $this->cn = mysqli_connect("localhost", "root", "", "challenge");
     }
 
     public function numRows(){
